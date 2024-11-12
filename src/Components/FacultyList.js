@@ -9,7 +9,7 @@ function FacultyList() {
   const [branch, setBranch] = useState('');
   const [editingId, setEditingId] = useState(null);
 
-  const API_URL = "http://localhost:5000/api/faculty";
+  const API_URL = "https://three1514-crudmvc-server.onrender.com";
 
   useEffect(() => {
     fetchFaculty();
