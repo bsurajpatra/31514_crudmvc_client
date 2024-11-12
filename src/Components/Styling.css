@@ -1,0 +1,108 @@
+/* Container styling */
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 20px;
+  background-color: #f9fafb;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center aligns all items inside */
+}
+
+/* Form group styling */
+.form-group {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.input-field {
+  padding: 10px;
+  border: 1px solid #d1d5db;
+  border-radius: 5px;
+  width: 150px;
+  font-size: 16px;
+}
+
+/* Action button styling */
+.action-button {
+  padding: 10px 18px;
+  background-color: #2563eb;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.action-button:hover {
+  background-color: #1d4ed8;
+}
+
+/* Table styling */
+.table-container {
+  width: 100%;
+  display: flex;
+  justify-content: center; /* Center aligns the table inside the container */
+  margin-top: 20px;
+}
+
+.table {
+  width: 100%;
+  max-width: 100%;
+  border-collapse: collapse;
+  margin: 0 auto; /* Center align table within the table container */
+}
+
+.table th,
+.table td {
+  border: 1px solid #e5e7eb;
+  padding: 12px;
+  text-align: center;
+}
+
+.table th {
+  background-color: #1e3a8a;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.table tr:nth-child(even) {
+  background-color: #f3f4f6;
+}
+/* Edit and delete button styling */
+.edit-button,
+.delete-button {
+    padding: 8px 16px;
+    margin: 0 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #ffffff;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+/* Edit button styling */
+.edit-button {
+    background-color: #17a2b8; /* Info color */
+}
+
+.edit-button:hover {
+    background-color: #138496;
+}
+
+/* Delete button styling */
+.delete-button {
+    background-color: #dc3545; /* Danger color */
+}
+
+.delete-button:hover {
+    background-color: #c82333;
+}
+
