@@ -9,7 +9,7 @@ function StudentList() {
   const [grade, setGrade] = useState('');
   const [editingId, setEditingId] = useState(null);
 
-const API_URL = "https://three1514-crudmvc-server.onrender.com/api/students";
+  const API_URL = "https://three1514-crudmvc-server.onrender.com/api/students";
 
   useEffect(() => {
     fetchStudents();
@@ -87,35 +87,22 @@ const API_URL = "https://three1514-crudmvc-server.onrender.com/api/students";
           {editingId ? "Update Student" : "Add Student"}
         </button>
       </div>
-  
-      <div className="table-container">
-        <table className="table">
-          <thead>
-            <tr>
-              <th>Name</th>
-              <th>Age</th>
-              <th>Grade</th>
-              <th>Actions</th>
-            </tr>
-          </thead>
-          <tbody>
-            {students.map((student) => (
-              <tr key={student._id}>
-                <td>{student.name}</td>
-                <td>{student.age}</td>
-                <td>{student.grade}</td>
-                <td>
-                  <button className="edit-button" onClick={() => editStudent(student)}>Edit</button>
-                  <button className="delete-button" onClick={() => deleteStudent(student._id)}>Delete</button>
-                </td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
+
+      <div className="card-container">
+        {students.map((student) => (
+          <div key={student._id} className="card">
+            <h3>{student.name}</h3>
+            <p><strong>Age:</strong> {student.age}</p>
+            <p><strong>Grade:</strong> {student.grade}</p>
+            <div className="card-actions">
+              <button className="edit-button" onClick={() => editStudent(student)}>Edit</button>
+              <button className="delete-button" onClick={() => deleteStudent(student._id)}>Delete</button>
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   );
-  
 }
 
 export default StudentList;
