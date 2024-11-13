@@ -7,18 +7,37 @@
 }
 
 .main-heading {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
   color: #1e3a8a;
   font-size: 36px;
   font-weight: bold;
-  margin-top: 30px;
-  margin-bottom: 20px;
+  padding: 20px 0;
+  margin: 0;
+  background-color: white; /* Adding background to ensure text is readable */
+  z-index: 99; /* Slightly lower than footer to ensure proper stacking if they overlap */
+  border-bottom: 1px solid #e5e7eb; /* Optional: adds a subtle separator */
+  text-align: center;
+}
+
+
+body {
+  padding-top: calc(36px + 40px); 
+  padding-bottom: calc(15px + 40px + 2px); 
 }
 .footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
   margin-top: 40px;
-  padding: 15px 0;
+  padding: 13px 0;
   background-color: #1e3a8a;
   color: #ffffff;
   font-size: 14px;
   text-align: center;
   border-top: 2px solid #2563eb;
+  z-index: 100;
 }
