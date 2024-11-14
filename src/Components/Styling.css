@@ -153,13 +153,17 @@
 
 /* Drop zone styling */
 .drop-zone {
+  width: 60%; /* Adjust the width as needed to make it rectangular */
+  max-width: 500px; /* Set a max-width to control the rectangle's width */
+  margin: 0 auto; /* Center it horizontally */
   border: 2px dashed #333;
   border-radius: 5px;
-  padding: 40px;
+  padding: 20px 0; /* Adjust padding to make it more rectangular */
   cursor: pointer;
   background-color: #f9f9f9;
   transition: background-color 0.2s ease;
   color: #666;
+  text-align: center;
 }
 
 .drop-zone.dragging {
