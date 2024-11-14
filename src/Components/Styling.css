@@ -130,7 +130,6 @@
 /* File upload container styling */
 .file-upload-container {
   max-width: 800px;
-  max-height:600px;
   margin: 2rem auto;
   padding: 2rem;
   background-color: #ffffff;
@@ -154,17 +153,22 @@
 
 /* Drop zone styling */
 .drop-zone {
-  width: 60%; /* Adjust the width as needed to make it rectangular */
-  max-width: 500px; /* Set a max-width to control the rectangle's width */
-  margin: 0 auto; /* Center it horizontally */
+  width: 60%;
+  height: 300px;  /* Added fixed height for rectangle shape */
+  max-width: 500px;
+  margin: 20px auto;
   border: 2px dashed #333;
   border-radius: 5px;
-  padding: 20px 0; /* Adjust padding to make it more rectangular */
+  padding: 20px;
   cursor: pointer;
   background-color: #f9f9f9;
   transition: background-color 0.2s ease;
   color: #666;
   text-align: center;
+  display: flex;    /* Added for better content alignment */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .drop-zone.dragging {
