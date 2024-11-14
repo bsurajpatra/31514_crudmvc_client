@@ -79,6 +79,13 @@ function FacultyList() {
     }
   };
 
+  const editFaculty = (facultyMember) => {
+    setEditingId(facultyMember._id);
+    setName(facultyMember.name);
+    setDesignation(facultyMember.designation);
+    setBranch(facultyMember.branch);
+  };
+
   return (
     <div className="container faculty-list-container">
       <h2 className="title">Faculty List</h2>
@@ -106,34 +113,22 @@ function FacultyList() {
           {editingId ? "Update Faculty" : "Add Faculty"}
         </button>
       </div>
-  
-      <div className="table-container">
-        <table className="table">
-          <thead>
-            <tr>
-              <th>Name</th>
-              <th>Designation</th>
-              <th>Branch</th>
-              <th>Actions</th>
-            </tr>
-          </thead>
-          <tbody>
-            {faculty.map((facultyMember) => (
-              <tr key={facultyMember._id}>
-                <td>{facultyMember.name}</td>
-                <td>{facultyMember.designation}</td>
-                <td>{facultyMember.branch}</td>
-                <td>
-                  <button className="edit-button" onClick={() => editFaculty(facultyMember)}>Edit</button>
-                  <button className="delete-button" onClick={() => deleteFaculty(facultyMember._id)}>Delete</button>
-                </td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
+
+      <div className="card-container">
+        {faculty.map((facultyMember) => (
+          <div key={facultyMember._id} className="card">
+            <h3>{facultyMember.name}</h3>
+            <p><strong>Designation:</strong> {facultyMember.designation}</p>
+            <p><strong>Branch:</strong> {facultyMember.branch}</p>
+            <div className="card-actions">
+              <button className="edit-button" onClick={() => editFaculty(facultyMember)}>Edit</button>
+              <button className="delete-button" onClick={() => deleteFaculty(facultyMember._id)}>Delete</button>
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   );
-}  
+}
 
 export default FacultyList;
